@@ -4,9 +4,9 @@ public class Scorer : MonoBehaviour
 {
     private int _score;
 
-    private void OnCollisionEnter(Collision collision)
+    public void AddToScore(string tag)
     {
-        if (collision.gameObject.CompareTag("Hit")) return;
+        if (tag == "Hit") return;
         _score++;
         Debug.Log($"We touched things: {_score} times");
     }
